@@ -17,7 +17,7 @@
     "deploy:win32": "electron-builder --win nsis:ia32",
     "deploy:win64": "electron-builder --win nsis:x64",
     "deploy:osx": "electron-builder --mac",
-    "deploy": "electron-builder GH_TOKEN=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 build --win --publish always"
+    "deploy": "electron-builder build --win --publish always"
   },
   "dependencies": {
     "axios": "^1.3.3",
