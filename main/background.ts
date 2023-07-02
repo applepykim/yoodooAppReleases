@@ -5,7 +5,8 @@ import {naverLogin} from "./goingUp/naverLogin/index.mjs";
 import {keywordSearch} from "./goingUp/keywordSearch/index.mjs";
 import {moveNextPage} from "./goingUp/moveNextPage/index.mjs";
 import {searchMySite} from "./goingUp/searchMySite/index.mjs";
-import {autoUpdater} from "electron-updater";
+// import {autoUpdater} from "electron-updater";
+import { autoUpdater } from 'electron-updater'
 
 const isProd: boolean = process.env.NODE_ENV === 'production';
 // const isProd: boolean = true;
@@ -27,10 +28,10 @@ if (isProd) {
     width: 1800,
     height: 1200,
   });
+  await autoUpdater.checkForUpdatesAndNotify();
   
   if (isProd) {
     await mainWindow.loadURL('app://./home.html')
-    await autoUpdater.checkForUpdatesAndNotify();
     
     ipcMain.on("app_version", (event) => {
       // app_version 채널로 현재 version을 보내는 코드
@@ -51,6 +52,7 @@ if (isProd) {
       // 일렉트론 앱 종료 후 최신 버전으로 다시 설치
       autoUpdater.quitAndInstall();
     });
+    
   } else {
     const port = process.argv[2];
     await mainWindow.loadURL(`http://localhost:${port}/home`);

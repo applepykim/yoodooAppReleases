@@ -1,0 +1,5 @@
+publish:
+    provider: github,
+    token: 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
+  }
+]

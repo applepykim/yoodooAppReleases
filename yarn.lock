@@ -1818,6 +1818,13 @@ atomically@^1.7.0:
   resolved "https://registry.npmjs.org/atomically/-/atomically-1.7.0.tgz#c07a0458432ea6dbc9a3506fffa424b48bccaafe"
   integrity sha512-Xcz9l0z7y9yQ9rdDaxlmaI4uJHf/T8g9hOEzJcsEqX2SjCj4J20uK7+ldkDHMbpJDK76wF7xEIgxc/vSlsfw5w==
 
+auto-parse@^1.3.0:
+  version "1.8.0"
+  resolved "https://registry.npmjs.org/auto-parse/-/auto-parse-1.8.0.tgz#1164051c832d5574e8eb6a18d3a37a278fe61e72"
+  integrity sha512-Uri4uC+K5cSi5hjM4snFrqPrjqUpwxeSW5EMTPvN7Ju3PlDzmXXDr5tjdzxPvvwgT3J7bmMDJ3Rm625nbrc72A==
+  dependencies:
+    typpy "2.3.11"
+
 autoprefixer@^10.4.7:
   version "10.4.14"
   resolved "https://registry.npmjs.org/autoprefixer/-/autoprefixer-10.4.14.tgz#e28d49902f8e759dd25b153264e862df2705f79d"
@@ -1829,6 +1836,13 @@ autoprefixer@^10.4.7:
     normalize-range "^0.1.2"
     picocolors "^1.0.0"
     postcss-value-parser "^4.2.0"
+
+axios@^0.24.0:
+  version "0.24.0"
+  resolved "https://registry.npmjs.org/axios/-/axios-0.24.0.tgz#804e6fa1e4b9c5288501dd9dff56a7a0940d20d6"
+  integrity sha512-Q6cWsys88HoPgAaFAVUb0WpPk0O8iTeisR9IMqy9G8AbO4NlpVknrnQS03zzF9PGAWgO3cgletO3VjV/P7VztA==
+  dependencies:
+    follow-redirects "^1.14.4"
 
 axios@^1.3.3:
   version "1.4.0"
@@ -2065,6 +2079,11 @@ camelcase-css@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/camelcase-css/-/camelcase-css-2.0.1.tgz#ee978f6947914cc30c6b44741b6ed1df7f043fd5"
   integrity sha512-QOSvevhslijgYwRx6Rv7zKdMF8lbRmx+uQGx2+vDc+KI/eBnsy9kit5aj23AgGu3pa4t9AgwbnXWqS+iOY+2aA==
+
+camelcase@^5.3.1:
+  version "5.3.1"
+  resolved "https://registry.npmjs.org/camelcase/-/camelcase-5.3.1.tgz#e3c9b31569e106811df242f715725a1f4c494320"
+  integrity sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==
 
 caniuse-lite@^1.0.30001406, caniuse-lite@^1.0.30001464, caniuse-lite@^1.0.30001503:
   version "1.0.30001508"
@@ -2521,6 +2540,26 @@ dotenv-expand@^5.1.0:
   resolved "https://registry.npmjs.org/dotenv-expand/-/dotenv-expand-5.1.0.tgz#3fbaf020bfd794884072ea26b1e9791d45a629f0"
   integrity sha512-YXQl1DSa4/PQyRfgrv6aoNjhasp/p4qs9FjJ4q4cQk+8m4r6k4ZSiEyytKG8f8W9gi8WsQtIObNmKd+tMzNTmA==
 
+dotenv-extended@^2.9.0:
+  version "2.9.0"
+  resolved "https://registry.npmjs.org/dotenv-extended/-/dotenv-extended-2.9.0.tgz#1e44a018f90ee88c066273cd855e3095c7e781e5"
+  integrity sha512-MKc4WCqZj6Abx4rpDbQ9LsuBJldRLxLgFkY5qE+4JM7hXVYT/v8zyWGgnBeDjSOGzEecWOFPlosNpxfB9YnsCw==
+  dependencies:
+    auto-parse "^1.3.0"
+    camelcase "^5.3.1"
+    cross-spawn "^7.0.1"
+    dotenv "^8.2.0"
+
+dotenv@^16.3.1:
+  version "16.3.1"
+  resolved "https://registry.npmjs.org/dotenv/-/dotenv-16.3.1.tgz#369034de7d7e5b120972693352a3bf112172cc3e"
+  integrity sha512-IPzF4w4/Rd94bA9imS68tZBaYyBWSCE47V1RGuMrB94iyTOIEwRmVL2x/4An+6mETpLrKJ5hQkB8W4kFAadeIQ==
+
+dotenv@^8.2.0:
+  version "8.6.0"
+  resolved "https://registry.npmjs.org/dotenv/-/dotenv-8.6.0.tgz#061af664d19f7f4d8fc6e4ff9b584ce237adcb8b"
+  integrity sha512-IrPdXQsk2BbzvCBGBOTmmSH5SodmqZNt4ERAZDmW4CT+tL8VtvinqywuANaFu4bOMWki16nqf0e4oC0QIaDr/g==
+
 dotenv@^9.0.2:
   version "9.0.2"
   resolved "https://registry.npmjs.org/dotenv/-/dotenv-9.0.2.tgz#dacc20160935a37dea6364aa1bef819fb9b6ab05"
@@ -2559,6 +2598,14 @@ electron-builder@^24.4.0:
     read-config-file "6.3.2"
     simple-update-notifier "^1.1.0"
     yargs "^17.6.2"
+
+electron-github-autoupdater@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/electron-github-autoupdater/-/electron-github-autoupdater-2.0.0.tgz#3ca950d33f9e2b832245968e4e37570802819e56"
+  integrity sha512-ZnSQuWwv1lxyMqITiuI8vW4MlO24IoK9zZa4vo5NH/F0wskMGgDm0Kn4s1KAFq8XpzrxAjyjuE/TqE94cL9TAw==
+  dependencies:
+    axios "^0.24.0"
+    semver "^7.3.5"
 
 electron-publish@24.4.0:
   version "24.4.0"
@@ -2864,7 +2911,7 @@ find-up@^4.0.0:
     locate-path "^5.0.0"
     path-exists "^4.0.0"
 
-follow-redirects@^1.15.0:
+follow-redirects@^1.14.4, follow-redirects@^1.15.0:
   version "1.15.2"
   resolved "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.15.2.tgz#b460864144ba63f2681096f274c4e57026da2c13"
   integrity sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==
@@ -2956,6 +3003,13 @@ function-bind@^1.1.1:
   version "1.1.1"
   resolved "https://registry.npmjs.org/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
   integrity sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==
+
+function.name@^1.0.3:
+  version "1.0.13"
+  resolved "https://registry.npmjs.org/function.name/-/function.name-1.0.13.tgz#eef045abc4b5ff4e3e9d001a53ce14e090c971c6"
+  integrity sha512-mVrqdoy5npWZyoXl4DxCeuVF6delDcQjVS9aPdvLYlBxtMTZDR2B5GVEQEoM1jJyspCqg3C0v4ABkLE7tp9xFA==
+  dependencies:
+    noop6 "^1.0.1"
 
 gauge@^4.0.3:
   version "4.0.4"
@@ -3993,6 +4047,11 @@ node-releases@^2.0.12:
   version "2.0.12"
   resolved "https://registry.npmjs.org/node-releases/-/node-releases-2.0.12.tgz#35627cc224a23bfb06fb3380f2b3afaaa7eb1039"
   integrity sha512-QzsYKWhXTWx8h1kIvqfnC++o0pEmpRQA/aenALsL2F4pqNVr7YzcdMlDij5WBnwftRbJCNJL/O7zdKaxKPHqgQ==
+
+noop6@^1.0.1:
+  version "1.0.9"
+  resolved "https://registry.npmjs.org/noop6/-/noop6-1.0.9.tgz#8749944c15c09f2cd2d562ac24f5a8341762a950"
+  integrity sha512-DB3Hwyd89dPr5HqEPg3YHjzvwh/mCqizC1zZ8vyofqc+TQRyPDnT4wgXXbLGF4z9YAzwwTLi8pNLhGqcbSjgkA==
 
 nopt@^6.0.0:
   version "6.0.0"
@@ -5160,6 +5219,13 @@ typescript@^4.0.2, typescript@^4.9.4:
   version "4.9.5"
   resolved "https://registry.npmjs.org/typescript/-/typescript-4.9.5.tgz#095979f9bcc0d09da324d58d03ce8f8374cbe65a"
   integrity sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==
+
+typpy@2.3.11:
+  version "2.3.11"
+  resolved "https://registry.npmjs.org/typpy/-/typpy-2.3.11.tgz#21a0d22c96fb646306e08b6c669ad43608e1b3b9"
+  integrity sha512-Jh/fykZSaxeKO0ceMAs6agki9T5TNA9kiIR6fzKbvafKpIw8UlNlHhzuqKyi5lfJJ5VojJOx9tooIbyy7vHV/g==
+  dependencies:
+    function.name "^1.0.3"
 
 unbzip2-stream@1.4.3:
   version "1.4.3"
