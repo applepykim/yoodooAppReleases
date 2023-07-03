@@ -2607,6 +2607,11 @@ electron-github-autoupdater@^2.0.0:
     axios "^0.24.0"
     semver "^7.3.5"
 
+electron-log@^4.4.8:
+  version "4.4.8"
+  resolved "https://registry.npmjs.org/electron-log/-/electron-log-4.4.8.tgz#fcb9f714dbcaefb6ac7984c4683912c74730248a"
+  integrity sha512-QQ4GvrXO+HkgqqEOYbi+DHL7hj5JM+nHi/j+qrN9zeeXVKy8ZABgbu4CnG+BBqDZ2+tbeq9tUC4DZfIWFU5AZA==
+
 electron-publish@24.4.0:
   version "24.4.0"
   resolved "https://registry.npmjs.org/electron-publish/-/electron-publish-24.4.0.tgz#a58f49ecd727620f65372881788ebb1a9b853284"

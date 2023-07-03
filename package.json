@@ -24,6 +24,7 @@
     "dotenv": "^16.3.1",
     "dotenv-extended": "^2.9.0",
     "electron-github-autoupdater": "^2.0.0",
+    "electron-log": "^4.4.8",
     "electron-serve": "^1.1.0",
     "electron-store": "^8.1.0",
     "electron-updater": "^6.1.1",

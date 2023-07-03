@@ -7,6 +7,7 @@ import {moveNextPage} from "./goingUp/moveNextPage/index.mjs";
 import {searchMySite} from "./goingUp/searchMySite/index.mjs";
 // import {autoUpdater} from "electron-updater";
 import { autoUpdater } from 'electron-updater'
+import log from "electron-log";
 
 const isProd: boolean = process.env.NODE_ENV === 'production';
 // const isProd: boolean = true;
@@ -28,29 +29,32 @@ if (isProd) {
     width: 1800,
     height: 1200,
   });
-  await autoUpdater.checkForUpdatesAndNotify();
+  
+  await autoUpdater.checkForUpdates();
   
   if (isProd) {
     await mainWindow.loadURL('app://./home.html')
     
-    ipcMain.on("app_version", (event) => {
-      // app_version 채널로 현재 version을 보내는 코드
-      event.sender.send("app_version", { version: app.getVersion() });
+    autoUpdater.on('checking-for-update', () => {
+      log.info('업데이트 확인 중...');
     });
-    
-    autoUpdater.on("update-available", () => {
-      mainWindow.webContents.send("update_available");
+    autoUpdater.on('update-available', (info) => {
+      log.info('업데이트가 가능합니다.');
     });
-    
-    autoUpdater.on("update-downloaded", () => {
-      mainWindow.webContents.send("update_downloaded");
+    autoUpdater.on('update-not-available', (info) => {
+      log.info('현재 최신버전입니다.');
     });
-    
-    ipcMain.on("restart_app", () => {
-      // restart_app 채널로 수신 받았을 때
-      // autoUpdater의 함수를 사용하여
-      // 일렉트론 앱 종료 후 최신 버전으로 다시 설치
-      autoUpdater.quitAndInstall();
+    autoUpdater.on('error', (err) => {
+      log.info('에러가 발생하였습니다. 에러내용 : ' + err);
+    });
+    autoUpdater.on('download-progress', (progressObj) => {
+      let log_message = "다운로드 속도: " + progressObj.bytesPerSecond;
+      log_message = log_message + ' - 현재 ' + progressObj.percent + '%';
+      log_message = log_message + ' (' + progressObj.transferred + "/" + progressObj.total + ')';
+      log.info(log_message);
+    })
+    autoUpdater.on('update-downloaded', (info) => {
+      log.info('업데이트가 완료되었습니다.');
     });
     
   } else {
